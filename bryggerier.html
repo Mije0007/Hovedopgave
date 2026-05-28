@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beerd.dk | Vores øl</title>
+  <meta name="description" content="Se Beerds udvalg af craft beer og specialøl til erhverv.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Gå til forsiden"><img src="images/beerd-logo.svg" alt="Beerd logo"></a>
+      <button class="burger" aria-label="Åbn menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="main-nav" aria-label="Hovedmenu">
+        <a class="nav-link" href="bryggerier.html">Vores øl</a>
+        <a class="nav-link" href="kontakt.html">Kontakt</a>
+        <a class="nav-link login-nav" href="login.html">Log ind</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="filter-area" id="top">
+      <p class="filter-label">Sortér efter:</p>
+      <div class="filter-buttons">
+        <button class="btn btn-black" type="button">Bryggerier</button>
+        <button class="btn btn-black" type="button">Øl type</button>
+      </div>
+    </section>
+
+    <section class="section brewery-list">
+      <div class="container">
+        <article class="brewery-card">
+          <img class="brewery-can" src="images/can-green.svg" alt="Beerd øldåse">
+          <div class="text-card">
+            <h3>Udvalgte bryggerier</h3>
+            <p>Få adgang til et kurateret udvalg af specialøl fra bryggerier, der skiller sig ud på smag, identitet og kvalitet.</p>
+          </div>
+        </article>
+        <article class="brewery-card reverse">
+          <img class="brewery-can" src="images/can-pink.svg" alt="Beerd øldåse">
+          <div class="text-card">
+            <h3>Fleksible bestillinger</h3>
+            <p>Bestil specialøl i mindre mængder og tilpas dit udvalg efter sæson, efterspørgsel og kundegruppe.</p>
+          </div>
+        </article>
+        <article class="brewery-card">
+          <img class="brewery-can" src="images/can-purple.svg" alt="Beerd øldåse">
+          <div class="text-card">
+            <h3>Nye øltyper</h3>
+            <p>Udforsk IPA, sour, stout, lager og andre øltyper, der kan gøre dit sortiment mere spændende.</p>
+          </div>
+        </article>
+        <article class="brewery-card reverse">
+          <img class="brewery-can" src="images/can-yellow.svg" alt="Beerd øldåse">
+          <div class="text-card">
+            <h3>Til barer og restauranter</h3>
+            <p>Sammensæt et øludvalg, der passer til menu, stemning og de gæster, du gerne vil tiltrække.</p>
+          </div>
+        </article>
+        <article class="brewery-card">
+          <img class="brewery-can" src="images/can-blue.svg" alt="Beerd øldåse">
+          <div class="text-card">
+            <h3>Til bottleshops</h3>
+            <p>Skab et varieret udvalg af specialøl, der gør det nemt for dine kunder at finde noget nyt.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="top-button-wrap"><button class="btn" type="button" data-scroll-top>Til toppen</button></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a class="footer-logo" href="index.html"><img src="images/beerd-logo.svg" alt="Beerd logo"></a>
+      <div class="footer-contact">
+        <p class="footer-title">Kontakt</p>
+        <p>TELEFON NUMMER: 71928262<br>EMAIL: <a href="mailto:Cheers@Beerd.Dk">Cheers@Beerd.Dk</a></p>
+        <p>CVR: 42440027</p>
+        <p>BEERD ApS · H.C. Andersens Boulevard 41 · 1553 København V</p>
+      </div>
+      <div class="footer-social">
+        <p class="footer-title">Følg os</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook ikon"></a>
+          <a href="#" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram ikon"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

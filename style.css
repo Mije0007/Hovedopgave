@@ -4,15 +4,14 @@
   --background: #eaeaea;
   --black: #000000;
   --white: #ffffff;
-  --card: #f4ecec;
   --grey-card: #d2d2d2;
   --yellow: #f7b532;
   --max-width: 1180px;
+  --header-height: 98px;
+  --side-padding: clamp(20px, 5vw, 64px);
 }
 
-/* ============================= */
-/* Base */
-/* ============================= */
+/* Helt generelle regler for hele sitet */
 
 * {
   box-sizing: border-box;
@@ -64,9 +63,7 @@ label {
   margin: 0 auto;
 }
 
-/* ============================= */
-/* Buttons */
-/* ============================= */
+/* Knapper */
 
 .btn {
   display: inline-flex;
@@ -115,23 +112,22 @@ label {
   color: var(--black);
 }
 
-/* ============================= */
-/* Header */
-/* ============================= */
+/* Header og menu */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  min-height: 80px;
+  min-height: var(--header-height);
   background: var(--black);
   color: var(--white);
 }
 
 .header-inner {
   width: min(100%, 1280px);
+  min-height: var(--header-height);
   margin: 0 auto;
-  padding: 14px 64px;
+  padding: 10px var(--side-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -209,14 +205,13 @@ label {
   transform: translateY(-11px) rotate(-45deg);
 }
 
-/* ============================= */
-/* Forside: Hero */
-/* ============================= */
+/* Forside: hero */
 
 .hero {
   position: relative;
   overflow: hidden;
-  min-height: calc(100vh - 90px);
+  min-height: calc(100svh - var(--header-height));
+  padding: clamp(4rem, 7vw, 7rem) var(--side-padding);
   display: flex;
   align-items: center;
   background: radial-gradient(
@@ -243,16 +238,18 @@ label {
 }
 
 .hero-inner {
+  width: min(100%, var(--max-width));
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 0.95fr 1.05fr;
   align-items: center;
-  gap: clamp(1rem, 3vw, 3rem);
+  gap: clamp(2rem, 5vw, 5rem);
 }
 
 .hero-can {
-  width: clamp(460px, 56vw, 920px);
-  max-width: none;
-  margin-left: clamp(-3rem, -4vw, -1rem);
+  width: clamp(360px, 42vw, 680px);
+  max-width: 100%;
+  margin-left: 0;
   justify-self: center;
   transform: rotate(-10deg);
   filter: drop-shadow(0 32px 38px rgba(0, 0, 0, 0.2));
@@ -261,7 +258,8 @@ label {
 .hero-text {
   position: relative;
   z-index: 2;
-  max-width: 620px;
+  max-width: 650px;
+  justify-self: start;
 }
 
 .hero h1 {
@@ -277,9 +275,7 @@ label {
   text-transform: uppercase;
 }
 
-/* ============================= */
-/* Newsletter */
-/* ============================= */
+/* Forside: nyhedsbrev */
 
 .newsletter {
   overflow: hidden;
@@ -294,9 +290,9 @@ label {
 
 .newsletter-inner {
   display: grid;
-  grid-template-columns: 1.4fr 220px;
+  grid-template-columns: 1.35fr 0.65fr;
   align-items: center;
-  gap: 70px;
+  gap: clamp(3rem, 7vw, 7rem);
 }
 
 .newsletter h2 {
@@ -331,14 +327,12 @@ label {
 }
 
 .news-can {
-  width: 170px;
+  width: clamp(260px, 24vw, 420px);
   justify-self: center;
-  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.22));
+  filter: drop-shadow(0 22px 26px rgba(0, 0, 0, 0.22));
 }
 
-/* ============================= */
-/* Forside: Feature cards */
-/* ============================= */
+/* Forside: de store tekstkort */
 
 .features {
   padding-block: clamp(4rem, 8vw, 8rem);
@@ -431,6 +425,8 @@ label {
   text-transform: none;
 }
 
+/* Kun desktop: sticky-effekten på forsidens store kort */
+
 @media (min-width: 769px) {
   .feature-row {
     grid-template-columns: minmax(320px, 0.9fr) minmax(520px, 1.1fr);
@@ -479,9 +475,7 @@ label {
   }
 }
 
-/* ============================= */
-/* Forside: Bottom CTA */
-/* ============================= */
+/* Forside: nederste CTA */
 
 .bottom-cta {
   overflow: hidden;
@@ -533,9 +527,7 @@ label {
   text-transform: uppercase;
 }
 
-/* ============================= */
-/* Reveal effect */
-/* ============================= */
+/* Animationen der får elementer til at komme ind fra siden */
 
 .reveal-left,
 .reveal-right,
@@ -572,9 +564,7 @@ label {
   transition-delay: 0.12s;
 }
 
-/* ============================= */
-/* Bryggerier: Filter */
-/* ============================= */
+/* Bryggerier: filterområdet */
 
 .filter-area {
   padding: clamp(5rem, 9vw, 8rem) 24px 3rem;
@@ -652,9 +642,7 @@ label {
   transform: translateY(-2px);
 }
 
-/* ============================= */
-/* Bryggerier: Beer cards */
-/* ============================= */
+/* Bryggerier: kortene med øl */
 
 .brewery-list {
   padding-top: 2rem;
@@ -717,7 +705,8 @@ label {
   transition: transform 0.35s ease, filter 0.35s ease;
 }
 
-/* AKIA og Baxbier har mindre transparent kant i filen og skal derfor være mindre */
+/* AKIA og Baxbier ser større ud end de andre, så de får deres egen mindre størrelse */
+
 .beer-card .brewery-can[src*="akia"],
 .beer-card .brewery-can[src*="baxbier"] {
   max-height: clamp(210px, 21vw, 300px);
@@ -760,11 +749,9 @@ label {
 
 .beer-card-content h2 {
   margin: 0 0 1.1rem;
-  font-family: "Oswald", sans-serif;
   font-size: clamp(2.2rem, 3.8vw, 4.4rem);
   line-height: 0.96;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
   font-weight: 600;
 }
 
@@ -822,9 +809,7 @@ label {
   padding-bottom: 90px;
 }
 
-/* ============================= */
-/* Kontakt page */
-/* ============================= */
+/* Kontakt-siden */
 
 .contact-page {
   padding: 100px 24px 150px;
@@ -864,9 +849,7 @@ label {
   text-transform: none;
 }
 
-/* ============================= */
-/* Login page */
-/* ============================= */
+/* Login-siden */
 
 .login-page {
   padding: 140px 24px 170px;
@@ -950,9 +933,7 @@ label {
   text-decoration: underline;
 }
 
-/* ============================= */
 /* Footer */
-/* ============================= */
 
 .site-footer {
   padding: 38px 24px;
@@ -1003,17 +984,21 @@ label {
   transform: scale(1.08) translateY(-2px);
 }
 
-/* ============================= */
-/* Mobile */
-/* ============================= */
+/* Mobilversion */
 
 @media (max-width: 768px) {
-  .site-header {
-    min-height: 68px;
+  :root {
+    --header-height: 74px;
+    --side-padding: 20px;
+  }
+
+  .site-header,
+  .header-inner {
+    min-height: var(--header-height);
   }
 
   .header-inner {
-    padding: 10px 20px;
+    padding: 10px var(--side-padding);
   }
 
   .logo img {
@@ -1027,7 +1012,7 @@ label {
 
   .main-nav {
     position: absolute;
-    inset: 68px 0 auto 0;
+    inset: var(--header-height) 0 auto 0;
     display: none;
     flex-direction: column;
     gap: 0;
@@ -1058,6 +1043,7 @@ label {
 
   .hero {
     min-height: auto;
+    padding: 3.5rem var(--side-padding) 4.5rem;
   }
 
   .hero-inner,
@@ -1069,14 +1055,15 @@ label {
   }
 
   .hero-can {
-    width: min(115vw, 520px);
-    max-width: none;
+    width: min(92vw, 430px);
+    max-width: 100%;
     margin-left: 0;
   }
 
   .hero-text,
   .hero p {
     margin-inline: auto;
+    justify-self: center;
   }
 
   .newsletter-form {
@@ -1090,7 +1077,7 @@ label {
   }
 
   .news-can {
-    width: 130px;
+    width: min(72vw, 300px);
   }
 
   .features {
@@ -1202,7 +1189,7 @@ label {
 
   .filter-main-btn {
     min-width: 0;
-    width: 50%;
+    width: calc(50% - 6px);
     padding-inline: 12px;
   }
 
@@ -1347,9 +1334,7 @@ label {
   }
 }
 
-/* ============================= */
-/* Reduced motion */
-/* ============================= */
+/* Til brugere der har slået animationer fra */
 
 @media (prefers-reduced-motion: reduce) {
   .reveal-left,

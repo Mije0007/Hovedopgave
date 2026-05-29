@@ -1079,3 +1079,280 @@ label {
     transition: none;
   }
 }
+/* ============================= */
+/* Bryggerier filter + beer cards */
+/* ============================= */
+
+.filter-area {
+  padding: 120px 24px 50px;
+  text-align: center;
+}
+
+.filter-label {
+  margin: 0 0 25px;
+  color: var(--yellow);
+  font-family: "Inter", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 8vw, 8rem);
+  margin-bottom: 32px;
+}
+
+.filter-main-btn {
+  min-width: 220px;
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
+}
+
+.filter-main-btn:hover,
+.filter-main-btn.active {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--black);
+}
+
+.filter-subpanels {
+  width: min(100%, 900px);
+  margin: 0 auto;
+}
+
+.filter-subpanel {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.filter-subpanel.active {
+  display: flex;
+}
+
+.filter-sub-btn {
+  min-height: 42px;
+  padding: 10px 22px;
+  border: 1.5px solid var(--black);
+  background: var(--white);
+  color: var(--black);
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.filter-sub-btn:hover,
+.filter-sub-btn.active {
+  background: var(--yellow);
+  border-color: var(--yellow);
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+.beer-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4rem, 8vw, 7rem);
+}
+
+.beer-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.85fr) minmax(480px, 1.15fr);
+  align-items: center;
+  gap: clamp(2rem, 4vw, 5rem);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.beer-card.reverse {
+  grid-template-columns: minmax(480px, 1.15fr) minmax(260px, 0.85fr);
+}
+
+.beer-card.reverse .beer-image-wrap {
+  order: 2;
+}
+
+.beer-card.reverse .beer-card-content {
+  order: 1;
+}
+
+.beer-card.is-hidden {
+  display: none;
+}
+
+.beer-card.is-filtering {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.beer-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.beer-card .brewery-can {
+  height: clamp(330px, 32vw, 470px);
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transform: rotate(-7deg);
+  filter: drop-shadow(0 24px 28px rgba(0, 0, 0, 0.18));
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.beer-card.reverse .brewery-can {
+  transform: rotate(7deg);
+}
+
+.beer-card:hover .brewery-can {
+  transform: rotate(-3deg) scale(1.03);
+  filter: drop-shadow(0 30px 34px rgba(0, 0, 0, 0.22));
+}
+
+.beer-card.reverse:hover .brewery-can {
+  transform: rotate(3deg) scale(1.03);
+}
+
+.beer-card-content {
+  min-height: clamp(330px, 32vw, 470px);
+  max-width: 680px;
+  padding: clamp(2.4rem, 4vw, 4.2rem);
+}
+
+.beer-card-content h2 {
+  margin: 0 0 1rem;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(2.3rem, 4vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.beer-meta {
+  margin: 0 0 1.4rem;
+  color: var(--black);
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.beer-card-content p:not(.beer-meta) {
+  max-width: 520px;
+  margin: 0 0 1.8rem;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  line-height: 1.65;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.untappd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 9px 16px;
+  background: var(--yellow);
+  color: var(--black);
+  border: 1.5px solid var(--yellow);
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.untappd-btn:hover {
+  background: var(--black);
+  border-color: var(--black);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .filter-area {
+    padding: 85px 20px 35px;
+  }
+
+  .filter-buttons {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .filter-main-btn {
+    min-width: 0;
+    width: 50%;
+    padding-inline: 12px;
+  }
+
+  .filter-subpanel {
+    gap: 10px;
+  }
+
+  .filter-sub-btn {
+    padding: 9px 14px;
+    font-size: 0.78rem;
+  }
+
+  .beer-card-list {
+    gap: 4rem;
+  }
+
+  .beer-card,
+  .beer-card.reverse {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .beer-card.reverse .beer-image-wrap,
+  .beer-card.reverse .beer-card-content {
+    order: initial;
+  }
+
+  .beer-card .brewery-can,
+  .beer-card.reverse .brewery-can {
+    height: auto;
+    width: min(82vw, 340px);
+    transform: rotate(0deg);
+  }
+
+  .beer-card:hover .brewery-can,
+  .beer-card.reverse:hover .brewery-can {
+    transform: none;
+  }
+
+  .beer-card-content {
+    min-height: auto;
+    max-width: 90%;
+    margin-inline: auto;
+    padding: 2rem;
+  }
+
+  .beer-card-content h2 {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+  }
+
+  .beer-card-content p:not(.beer-meta) {
+    font-size: 1rem;
+  }
+
+  .untappd-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+}

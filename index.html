@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header class="site-header">
       <div class="header-inner">
@@ -32,20 +33,14 @@
 
     <main>
       <section class="section hero">
-        <div class="container hero-inner">
+        <div class="container hero-inner reveal-section">
           <img
-            class="hero-can scroll-beer"
+            class="hero-can reveal-left"
             src="images/beer_logo.png"
             alt="Hvid Beerd øldåse"
-            data-rotate-start="-20"
-            data-rotate-end="8"
-            data-x-start="-80"
-            data-y-start="70"
-            data-scale-start="0.85"
-            data-scale-end="1"
           />
 
-          <div>
+          <div class="hero-text reveal-right">
             <h1>Specialøl til barer, restauranter og bottleshops</h1>
             <p>
               Få adgang til udvalgte bryggerier, fleksible bestillinger og craft
@@ -56,8 +51,8 @@
       </section>
 
       <section class="section newsletter">
-        <div class="container newsletter-inner">
-          <div>
+        <div class="container newsletter-inner reveal-section">
+          <div class="reveal-left">
             <h2>Tilmeld nyhedsbrev</h2>
             <p>
               Få besked om nye specialøl, kommende imports og udvalgte
@@ -80,7 +75,7 @@
           </div>
 
           <img
-            class="news-can"
+            class="news-can reveal-right"
             src="images/can-news.svg"
             alt="Gul NEWS øldåse"
           />
@@ -88,21 +83,17 @@
       </section>
 
       <section class="section features">
-        <div class="container">
-          <article class="feature-row">
-            <img
-              class="feature-can scroll-beer"
-              src="images/beer_text1.png"
-              alt="Beerd øldåse med teksten udvalgte bryggerier"
-              data-rotate-start="-18"
-              data-rotate-end="6"
-              data-x-start="-120"
-              data-y-start="60"
-              data-scale-start="0.9"
-              data-scale-end="1.05"
-            />
+        <div class="container features-inner">
+          <article class="feature-row reveal-section">
+            <div class="feature-image-wrap reveal-left">
+              <img
+                class="feature-can"
+                src="images/beer_text1.png"
+                alt="Beerd øldåse med teksten udvalgte bryggerier"
+              />
+            </div>
 
-            <div class="text-card">
+            <div class="text-card reveal-right">
               <h3>Udvalgte bryggerier</h3>
               <p>
                 Få adgang til et kurateret udvalg af specialøl fra spændende
@@ -111,20 +102,16 @@
             </div>
           </article>
 
-          <article class="feature-row reverse">
-            <img
-              class="feature-can scroll-beer"
-              src="images/beer_text2.png"
-              alt="Beerd øldåse med teksten halv kolli flere muligheder"
-              data-rotate-start="18"
-              data-rotate-end="-8"
-              data-x-start="120"
-              data-y-start="70"
-              data-scale-start="0.9"
-              data-scale-end="1.05"
-            />
+          <article class="feature-row reverse reveal-section">
+            <div class="feature-image-wrap reveal-right">
+              <img
+                class="feature-can tilt-left"
+                src="images/beer_text2.png"
+                alt="Beerd øldåse med teksten halv kolli flere muligheder"
+              />
+            </div>
 
-            <div class="text-card">
+            <div class="text-card reveal-left">
               <h3>Halv kolli. Flere muligheder</h3>
               <p>
                 Bestil helt ned til en halv kolli og skab et bredere øludvalg
@@ -133,20 +120,16 @@
             </div>
           </article>
 
-          <article class="feature-row">
-            <img
-              class="feature-can scroll-beer"
-              src="images/beer_text3.png"
-              alt="Beerd øldåse med teksten test nyt uden stor risiko"
-              data-rotate-start="-16"
-              data-rotate-end="10"
-              data-x-start="-110"
-              data-y-start="80"
-              data-scale-start="0.88"
-              data-scale-end="1.04"
-            />
+          <article class="feature-row reveal-section">
+            <div class="feature-image-wrap reveal-left">
+              <img
+                class="feature-can"
+                src="images/beer_text3.png"
+                alt="Beerd øldåse med teksten test nyt uden stor risiko"
+              />
+            </div>
 
-            <div class="text-card">
+            <div class="text-card reveal-right">
               <h3>Test nyt uden stor risiko</h3>
               <p>
                 Prøv nye øl og bryggerier af i mindre mængder, så du kan finde
@@ -155,20 +138,16 @@
             </div>
           </article>
 
-          <article class="feature-row reverse">
-            <img
-              class="feature-can scroll-beer"
-              src="images/beer_text4.png"
-              alt="Beerd øldåse med teksten sammensat til din forretning"
-              data-rotate-start="16"
-              data-rotate-end="-6"
-              data-x-start="120"
-              data-y-start="80"
-              data-scale-start="0.9"
-              data-scale-end="1.04"
-            />
+          <article class="feature-row reverse reveal-section">
+            <div class="feature-image-wrap reveal-right">
+              <img
+                class="feature-can tilt-left"
+                src="images/beer_text4.png"
+                alt="Beerd øldåse med teksten sammensat til din forretning"
+              />
+            </div>
 
-            <div class="text-card">
+            <div class="text-card reveal-left">
               <h3>Sammensat til din forretning</h3>
               <p>
                 Vi hjælper med at sammensætte et udvalg, der matcher din
@@ -180,24 +159,13 @@
       </section>
 
       <section class="section bottom-cta">
-        <div class="container cta-inner">
-          <div class="cta-visual" aria-hidden="true">
+        <div class="container cta-inner reveal-section">
+          <div class="cta-visual reveal-left" aria-hidden="true">
             <img class="glass" src="images/beer-glass.svg" alt="" />
-
-            <img
-              class="small-can scroll-beer final-scroll-beer"
-              src="images/beer_logo.png"
-              alt=""
-              data-rotate-start="-14"
-              data-rotate-end="0"
-              data-x-start="-70"
-              data-y-start="90"
-              data-scale-start="0.8"
-              data-scale-end="1"
-            />
+            <img class="small-can" src="images/beer_logo.png" alt="" />
           </div>
 
-          <div class="cta-content">
+          <div class="cta-content reveal-right">
             <p>
               Opdag udvalgte bryggerier og find specialøl, der passer til din
               forretning.

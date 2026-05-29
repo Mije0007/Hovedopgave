@@ -1,125 +1,190 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex">
-  <title>Beerd.dk | Specialøl til erhverv</title>
-  <meta name="description" content="Beerd.dk leverer specialøl og craft beer til barer, restauranter og bottleshops.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Gå til forsiden">
-        <img src="images/beerd-logo.svg" alt="Beerd logo">
-      </a>
-      <button class="burger" aria-label="Åbn menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="main-nav" aria-label="Hovedmenu">
-        <a class="nav-link" href="bryggerier.html">Vores øl</a>
-        <a class="nav-link" href="kontakt.html">Kontakt</a>
-        <a class="nav-link login-nav" href="login.html">Log ind</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="section hero">
-      <div class="container hero-inner">
-        <img class="hero-can" src="images/can-white.svg" alt="Hvid Beerd øldåse">
-        <div>
-          <h1>Specialøl til barer, restauranter og bottleshops</h1>
-          <p>Få adgang til udvalgte bryggerier, fleksible bestillinger og craft beer, der passer til din forretning.</p>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Beerd.dk | Specialøl til erhverv</title>
+    <meta
+      name="description"
+      content="Beerd.dk leverer specialøl og craft beer til barer, restauranter og bottleshops."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Gå til forsiden">
+          <img src="images/beerd-logo.png" alt="Beerd logo" />
+        </a>
+        <button class="burger" aria-label="Åbn menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" aria-label="Hovedmenu">
+          <a class="nav-link" href="bryggerier.html">Vores øl</a>
+          <a class="nav-link" href="kontakt.html">Kontakt</a>
+          <a class="nav-link login-nav" href="login.html">Log ind</a>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <section class="section newsletter">
-      <div class="container newsletter-inner">
-        <div>
-          <h2>Tilmeld nyhedsbrev</h2>
-          <p>Få besked om nye specialøl, kommende imports og udvalgte bryggerier, før de lander på hjemmesiden.</p>
-          <p>Tilmeld dig Beerds nyhedsbrev og hold dig opdateret på craft beer til barer, restauranter og bottleshops.</p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Email" aria-label="Email" required>
-            <button class="btn btn-yellow" type="submit">Tilmeld</button>
-          </form>
-        </div>
-        <img class="news-can" src="images/can-news.svg" alt="Gul NEWS øldåse">
-      </div>
-    </section>
-
-    <section class="section features">
-      <div class="container">
-        <article class="feature-row">
-          <img class="feature-can" src="images/can-white.svg" alt="Beerd øldåse med teksten udvalgte bryggerier">
-          <div class="text-card">
-            <h3>Udvalgte bryggerier</h3>
-            <p>Få adgang til et kurateret udvalg af specialøl fra spændende bryggerier, der kan skabe nysgerrighed hos dine kunder.</p>
+    <main>
+      <section class="section hero">
+        <div class="container hero-inner">
+          <img
+            class="hero-can"
+            src="images/beer_logo.png"
+            alt="Hvid Beerd øldåse"
+          />
+          <div>
+            <h1>Specialøl til barer, restauranter og bottleshops</h1>
+            <p>
+              Få adgang til udvalgte bryggerier, fleksible bestillinger og craft
+              beer, der passer til din forretning.
+            </p>
           </div>
-        </article>
-
-        <article class="feature-row reverse">
-          <img class="feature-can" src="images/can-white.svg" alt="Beerd øldåse med teksten halv kolli flere muligheder">
-          <div class="text-card">
-            <h3>Halv kolli. Flere muligheder</h3>
-            <p>Bestil helt ned til en halv kolli og skab et bredere øludvalg uden at binde for mange varer på lager.</p>
-          </div>
-        </article>
-
-        <article class="feature-row">
-          <img class="feature-can" src="images/can-white.svg" alt="Beerd øldåse med teksten test nyt uden stor risiko">
-          <div class="text-card">
-            <h3>Test nyt uden stor risiko</h3>
-            <p>Prøv nye øl og bryggerier af i mindre mængder, så du kan finde det, der passer bedst til din bar, restaurant eller bottleshop.</p>
-          </div>
-        </article>
-
-        <article class="feature-row reverse">
-          <img class="feature-can" src="images/can-white.svg" alt="Beerd øldåse med teksten sammensat til din forretning">
-          <div class="text-card">
-            <h3>Sammensat til din forretning</h3>
-            <p>Vi hjælper med at sammensætte et udvalg, der matcher din målgruppe, dit koncept og din forretning.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section bottom-cta">
-      <div class="container cta-inner">
-        <div class="cta-visual" aria-hidden="true">
-          <img class="glass" src="images/beer-glass.svg" alt="">
-          <img class="small-can" src="images/can-white.svg" alt="">
         </div>
-        <div class="cta-content">
-          <p>Opdag udvalgte bryggerier og find specialøl, der passer til din forretning.</p>
-          <a class="btn" href="bryggerier.html">Se bryggerierne</a>
+      </section>
+
+      <section class="section newsletter">
+        <div class="container newsletter-inner">
+          <div>
+            <h2>Tilmeld nyhedsbrev</h2>
+            <p>
+              Få besked om nye specialøl, kommende imports og udvalgte
+              bryggerier, før de lander på hjemmesiden.
+            </p>
+            <p>
+              Tilmeld dig Beerds nyhedsbrev og hold dig opdateret på craft beer
+              til barer, restauranter og bottleshops.
+            </p>
+            <form class="newsletter-form">
+              <input
+                type="email"
+                placeholder="Email"
+                aria-label="Email"
+                required
+              />
+              <button class="btn btn-yellow" type="submit">Tilmeld</button>
+            </form>
+          </div>
+          <img
+            class="news-can"
+            src="images/can-news.svg"
+            alt="Gul NEWS øldåse"
+          />
+        </div>
+      </section>
+
+      <section class="section features">
+        <div class="container">
+          <article class="feature-row">
+            <img
+              class="feature-can"
+              src="images/beer_text1.png"
+              alt="Beerd øldåse med teksten udvalgte bryggerier"
+            />
+            <div class="text-card">
+              <h3>Udvalgte bryggerier</h3>
+              <p>
+                Få adgang til et kurateret udvalg af specialøl fra spændende
+                bryggerier, der kan skabe nysgerrighed hos dine kunder.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-row reverse">
+            <img
+              class="feature-can"
+              src="images/beer_text2.png"
+              alt="Beerd øldåse med teksten halv kolli flere muligheder"
+            />
+            <div class="text-card">
+              <h3>Halv kolli. Flere muligheder</h3>
+              <p>
+                Bestil helt ned til en halv kolli og skab et bredere øludvalg
+                uden at binde for mange varer på lager.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-row">
+            <img
+              class="feature-can"
+              src="images/beer_text3.png"
+              alt="Beerd øldåse med teksten test nyt uden stor risiko"
+            />
+            <div class="text-card">
+              <h3>Test nyt uden stor risiko</h3>
+              <p>
+                Prøv nye øl og bryggerier af i mindre mængder, så du kan finde
+                det, der passer bedst til din bar, restaurant eller bottleshop.
+              </p>
+            </div>
+          </article>
+
+          <article class="feature-row reverse">
+            <img
+              class="feature-can"
+              src="images/beer_text4.png"
+              alt="Beerd øldåse med teksten sammensat til din forretning"
+            />
+            <div class="text-card">
+              <h3>Sammensat til din forretning</h3>
+              <p>
+                Vi hjælper med at sammensætte et udvalg, der matcher din
+                målgruppe, dit koncept og din forretning.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section bottom-cta">
+        <div class="container cta-inner">
+          <div class="cta-visual" aria-hidden="true">
+            <img class="glass" src="images/beer-glass.svg" alt="" />
+            <img class="small-can" src="images/beer_logo.png" alt="" />
+          </div>
+          <div class="cta-content">
+            <p>
+              Opdag udvalgte bryggerier og find specialøl, der passer til din
+              forretning.
+            </p>
+            <a class="btn" href="bryggerier.html">Se bryggerierne</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <a class="footer-logo" href="index.html"
+          ><img src="images/beerd-logo.png" alt="Beerd logo"
+        /></a>
+        <div class="footer-contact">
+          <p class="footer-title">Kontakt</p>
+          <p>
+            TELEFON NUMMER: 71928262<br />EMAIL:
+            <a href="mailto:Cheers@Beerd.Dk">Cheers@Beerd.Dk</a>
+          </p>
+          <p>CVR: 42440027</p>
+          <p>BEERD ApS · H.C. Andersens Boulevard 41 · 1553 København V</p>
+        </div>
+        <div class="footer-social">
+          <p class="footer-title">Følg os</p>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"
+              ><img src="images/facebook_logo.png" alt="Facebook ikon"
+            /></a>
+            <a href="#" aria-label="Instagram"
+              ><img src="images/instagram_logo.png" alt="Instagram ikon"
+            /></a>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
+    </footer>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <a class="footer-logo" href="index.html"><img src="images/beerd-logo.svg" alt="Beerd logo"></a>
-      <div class="footer-contact">
-        <p class="footer-title">Kontakt</p>
-        <p>TELEFON NUMMER: 71928262<br>EMAIL: <a href="mailto:Cheers@Beerd.Dk">Cheers@Beerd.Dk</a></p>
-        <p>CVR: 42440027</p>
-        <p>BEERD ApS · H.C. Andersens Boulevard 41 · 1553 København V</p>
-      </div>
-      <div class="footer-social">
-        <p class="footer-title">Følg os</p>
-        <div class="social-icons">
-          <a href="#" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook ikon"></a>
-          <a href="#" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram ikon"></a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

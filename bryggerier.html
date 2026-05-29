@@ -28,90 +28,552 @@
       </div>
     </header>
     <main>
-      <section class="filter-area" id="top">
-        <p class="filter-label">Sortér efter:</p>
+      <section class="filter-area">
+        <p class="filter-label">SORTÉR EFTER:</p>
+
         <div class="filter-buttons">
-          <button class="btn btn-black" type="button">Bryggerier</button>
-          <button class="btn btn-black" type="button">Øl type</button>
+          <button
+            class="btn filter-main-btn active"
+            type="button"
+            data-panel="brewery"
+          >
+            BRYGGERIER
+          </button>
+
+          <button class="btn filter-main-btn" type="button" data-panel="type">
+            ØLTYPER
+          </button>
+        </div>
+
+        <div class="filter-subpanels">
+          <div class="filter-subpanel active" data-subpanel="brewery">
+            <button
+              class="filter-sub-btn active"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="all"
+            >
+              ALLE
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="akia"
+            >
+              AKIA
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="andersons-brewing"
+            >
+              ANDERSON'S
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="attik"
+            >
+              ATTIK
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="baxbier"
+            >
+              BAXBIER
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="beerbliotek"
+            >
+              BEERBLIOTEK
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="blackout-brewing"
+            >
+              BLACKOUT
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="gorilla"
+            >
+              GORILLA
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="hopalaa"
+            >
+              HOPALAA
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="kasper-brew-co"
+            >
+              KASPER BREW CO.
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="nepo-brewing"
+            >
+              NEPO
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="nurme"
+            >
+              NURME
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="ten-hands"
+            >
+              TEN HANDS
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="brewery"
+              data-filter="tuju"
+            >
+              TUJU
+            </button>
+          </div>
+
+          <div class="filter-subpanel" data-subpanel="type">
+            <button
+              class="filter-sub-btn active"
+              type="button"
+              data-filter-group="type"
+              data-filter="all"
+            >
+              ALLE
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="type"
+              data-filter="ipa"
+            >
+              IPA
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="type"
+              data-filter="pilsner"
+            >
+              PILSNER
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="type"
+              data-filter="stout"
+            >
+              STOUT
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="type"
+              data-filter="sour"
+            >
+              SOUR
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="type"
+              data-filter="wild-ale"
+            >
+              WILD ALE
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="type"
+              data-filter="barleywine"
+            >
+              BARLEYWINE
+            </button>
+            <button
+              class="filter-sub-btn"
+              type="button"
+              data-filter-group="type"
+              data-filter="alkoholfri"
+            >
+              ALKOHOLFRI
+            </button>
+          </div>
         </div>
       </section>
 
       <section class="section brewery-list">
-        <div class="container">
-          <article class="brewery-card">
-            <img
-              class="brewery-can"
-              src="images/can-green.svg"
-              alt="Beerd øldåse"
-            />
-            <div class="text-card">
-              <h3>Udvalgte bryggerier</h3>
+        <div class="container beer-card-list">
+          <article class="beer-card" data-brewery="akia" data-type="ipa">
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/akia.png"
+                alt="AKIA IPA øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>AKIA · HERE COMES THE SUN</h2>
+              <p class="beer-meta">IPA - New England / Hazy · 7% ABV</p>
               <p>
-                Få adgang til et kurateret udvalg af specialøl fra bryggerier,
-                der skiller sig ud på smag, identitet og kvalitet.
+                AKiA - Here Comes the Sun er en frisk og solrig øl med fokus på
+                lyse, frugtige smagsnuancer og en ren, behagelig balance. Den
+                har et indbydende udtryk og en lettilgængelig karakter, der gør
+                den oplagt til ølshops med kunder, der søger moderne specialøl
+                med friskhed og høj drikkeglæde.
               </p>
+              <a
+                href="https://untappd.com/b/akia-brygghus-here-comes-the-sun/4309945"
+                class="untappd-btn"
+                target="_blank"
+                rel="noopener"
+              >
+                LÆS MERE PÅ UNTAPPD
+              </a>
             </div>
           </article>
-          <article class="brewery-card reverse">
-            <img
-              class="brewery-can"
-              src="images/can-pink.svg"
-              alt="Beerd øldåse"
-            />
-            <div class="text-card">
-              <h3>Fleksible bestillinger</h3>
+
+          <article
+            class="beer-card reverse"
+            data-brewery="andersons-brewing"
+            data-type="stout"
+          >
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text1.png"
+                alt="Anderson's Brewing stout øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>ANDERSON'S · DARK ALE</h2>
+              <p class="beer-meta">ANDERSON'S BREWING · STOUT</p>
               <p>
-                Bestil specialøl i mindre mængder og tilpas dit udvalg efter
-                sæson, efterspørgsel og kundegruppe.
+                Anderson's Brewing er et af Estlands førende bryggerier. De
+                brygger bredt på tværs af øltyper og arbejder også med
+                fadlagrede øl med dybde, kompleksitet og høj kvalitet.
               </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
             </div>
           </article>
-          <article class="brewery-card">
-            <img
-              class="brewery-can"
-              src="images/can-purple.svg"
-              alt="Beerd øldåse"
-            />
-            <div class="text-card">
-              <h3>Nye øltyper</h3>
+
+          <article class="beer-card" data-brewery="attik" data-type="wild-ale">
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text2.png"
+                alt="Attik Wild Ale øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>ATTIK · WILD ALE</h2>
+              <p class="beer-meta">ATTIK · WILD ALE</p>
               <p>
-                Udforsk IPA, sour, stout, lager og andre øltyper, der kan gøre
-                dit sortiment mere spændende.
+                Fra den spanske solkyst kommer Attik med et bredt udvalg af
+                kvalitetsøl. De brygger blandt andet IPA’er, Stouts og
+                fadlagrede Wild Ales med masser af karakter.
               </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
             </div>
           </article>
-          <article class="brewery-card reverse">
-            <img
-              class="brewery-can"
-              src="images/can-yellow.svg"
-              alt="Beerd øldåse"
-            />
-            <div class="text-card">
-              <h3>Til barer og restauranter</h3>
+
+          <article
+            class="beer-card reverse"
+            data-brewery="baxbier"
+            data-type="ipa"
+          >
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text3.png"
+                alt="Baxbier IPA øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>BAXBIER · BANDWAGON IPA</h2>
+              <p class="beer-meta">BAXBIER · IPA</p>
               <p>
-                Sammensæt et øludvalg, der passer til menu, stemning og de
-                gæster, du gerne vil tiltrække.
+                Baxbier elsker at eksperimentere med forskellige stilarter.
+                Deres Bandwagon-serie byder på store, fyldige IPA’er, der kan
+                give dit sortiment ekstra kant.
               </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
             </div>
           </article>
-          <article class="brewery-card">
-            <img
-              class="brewery-can"
-              src="images/can-blue.svg"
-              alt="Beerd øldåse"
-            />
-            <div class="text-card">
-              <h3>Til bottleshops</h3>
+
+          <article
+            class="beer-card"
+            data-brewery="beerbliotek"
+            data-type="pilsner"
+          >
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text4.png"
+                alt="Beerbliotek øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>BEERBLIOTEK · MODERN PILSNER</h2>
+              <p class="beer-meta">BEERBLIOTEK · PILSNER</p>
               <p>
-                Skab et varieret udvalg af specialøl, der gør det nemt for dine
-                kunder at finde noget nyt.
+                Beerbliotek har mere end 300 bryg bag sig og eksporterer til
+                mange lande. De brygger et bredt udvalg af øltyper og fylder
+                dermed hylderne godt ud på øl-biblioteket.
               </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="beer-card reverse"
+            data-brewery="blackout-brewing"
+            data-type="stout"
+          >
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_logo.png"
+                alt="Blackout Brewing stout øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>BLACKOUT · BARREL AGED STOUT</h2>
+              <p class="beer-meta">BLACKOUT BREWING · STOUT</p>
+              <p>
+                Fra Transsylvanien i Rumænien kommer Blackout Brewing med masser
+                af power. Fokus er især fadlagrede mørke øl med stor smag, fylde
+                og højere procenter.
+              </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
+            </div>
+          </article>
+
+          <article class="beer-card" data-brewery="gorilla" data-type="ipa">
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text1.png"
+                alt="Gorilla IPA øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>GORILLA · BERLIN IPA</h2>
+              <p class="beer-meta">GORILLA · IPA</p>
+              <p>
+                Gorilla er placeret i det pulserende Berlin, og deres øl bærer
+                præg af samme energi. Lækre craft beers med stærke ratings og
+                moderne identitet.
+              </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="beer-card reverse"
+            data-brewery="hopalaa"
+            data-type="sour"
+          >
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text2.png"
+                alt="Hopalaa Sour øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>HOPALAA · SOURBIT</h2>
+              <p class="beer-meta">HOPALAA · SOUR</p>
+              <p>
+                Hopalaa fra Letland har fokus på tørhumlede IPA’er, DIPA’er og
+                TIPA’er. Derudover brygger de Sourbit-serien med Imperial
+                Berliner Weisse og masser af frugt.
+              </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="beer-card"
+            data-brewery="kasper-brew-co"
+            data-type="pilsner"
+          >
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text3.png"
+                alt="Kasper Brew Co øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>KASPER · EVERYDAY PILSNER</h2>
+              <p class="beer-meta">KASPER BREW CO. · PILSNER</p>
+              <p>
+                Kasper Brew Co. er et lille dansk bryggeri fra Hvidovre. De
+                jagter ikke nødvendigvis hype, men brygger øl, de selv kan lide
+                — ærligt, simpelt og velsmagende.
+              </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="beer-card reverse"
+            data-brewery="nepo-brewing"
+            data-type="alkoholfri"
+          >
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text4.png"
+                alt="NEPO Brewing alkoholfri øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>NEPO · ALCOHOL FREE</h2>
+              <p class="beer-meta">NEPO BREWING · ALKOHOLFRI</p>
+              <p>
+                NEPO Brewing er et af Polens stærke bryggerier. De brygger
+                blandt andet Smoothie Sours, IPA’er, mørke øl og alkoholfri øl —
+                alle med fokus på kvalitet.
+              </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
+            </div>
+          </article>
+
+          <article class="beer-card" data-brewery="nurme" data-type="sour">
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_logo.png"
+                alt="Nurme Sour øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>NURME · FRUIT SOUR</h2>
+              <p class="beer-meta">NURME · SOUR</p>
+              <p>
+                Nurme ligger i hjertet af Riga og brygger stort set alle
+                øltyper. Bryggeriet er kreativt og går ikke på kompromis med
+                kvaliteten i deres øl.
+              </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
+            </div>
+          </article>
+
+          <article
+            class="beer-card reverse"
+            data-brewery="ten-hands"
+            data-type="ipa"
+          >
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text1.png"
+                alt="Ten Hands IPA øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>TEN HANDS · JUICY IPA</h2>
+              <p class="beer-meta">TEN HANDS · IPA</p>
+              <p>
+                Ten Hands leverer høj kvalitet og stærke dåsedesigns.
+                Humlefyldte IPA’er og frugtige Sours er blandt de øl, der oftest
+                kommer fra bryggeriet.
+              </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
+            </div>
+          </article>
+
+          <article class="beer-card" data-brewery="tuju" data-type="barleywine">
+            <div class="beer-image-wrap">
+              <img
+                class="brewery-can"
+                src="images/beer_text2.png"
+                alt="TUJU Barleywine øldåse"
+              />
+            </div>
+
+            <div class="beer-card-content text-card">
+              <h2>TUJU · BLACK BARREL</h2>
+              <p class="beer-meta">TUJU · BARLEYWINE</p>
+              <p>
+                Det finske bryggeri TUJU arbejder med flere serier, blandt andet
+                Black Barrel med fadlagret Stout og Barleywine samt Wild Barrel
+                med Wild Ales.
+              </p>
+              <a href="#" class="untappd-btn" target="_blank" rel="noopener">
+                LÆS MERE PÅ UNTAPPD
+              </a>
             </div>
           </article>
         </div>
       </section>
+
       <div class="top-button-wrap">
-        <button class="btn" type="button" data-scroll-top>Til toppen</button>
+        <button class="btn to-top" type="button">TIL TOPPEN</button>
       </div>
     </main>
 
